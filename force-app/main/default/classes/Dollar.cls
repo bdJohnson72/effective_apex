@@ -9,7 +9,7 @@ public with sharing class Dollar {
     // TODO money rounding
     //TODO implement equals
     //TODO implement hashing
-    public Integer amount;
+    private Integer amount;
 
     public Dollar(Integer amount){
         this.amount = amount;

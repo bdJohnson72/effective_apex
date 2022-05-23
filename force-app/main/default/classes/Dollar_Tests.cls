@@ -9,11 +9,11 @@ private class Dollar_Tests {
        //given
         Dollar five = new Dollar(5);
         //when
-        Dollar product = five.times(3);
+
         //then
-        System.assert(15 == product.amount);
-        product = five.times(2);
-        System.assert(10 == product.amount);
+        System.assert(new Dollar(10) == five.times(2));
+
+        System.assert(new Dollar(15)== five.times(3));
     }
 
     @IsTest
