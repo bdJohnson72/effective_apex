@@ -2,7 +2,7 @@
  * Created by  on .
  */
 
-public with sharing class Dollar {
+public with sharing class Dollar extends Money {
 
     //TODO $5 + 10 CHF = $10 if rate is 2:1 $5 * 2 = $10
     //TODO dollar side effects
@@ -10,9 +10,8 @@ public with sharing class Dollar {
     //TODO implement equals
     //TODO implement hashing
     // TODO 5 CHF * 2 = 10CHF
-    // TODO Common equals
     // TODO Common times
-    private Integer amount;
+
 
     public Dollar(Integer amount){
         this.amount = amount;
@@ -22,9 +21,4 @@ public with sharing class Dollar {
         return new Dollar(multiplier * this.amount);
     }
 
-
-    public Boolean equals(Object obj) {
-        Dollar dollar = (Dollar)obj;
-        return this.amount == dollar.amount;
-    }
 }

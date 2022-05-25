@@ -21,6 +21,9 @@ private class Dollar_Tests {
         System.assert(new Dollar(5).equals(new Dollar(5)));
         System.assert(! new Dollar(5).equals(new Dollar(6)));
         System.assert(! new Dollar(5).equals(new Dollar(6)));
+        System.assert(new Frank(5).equals(new Frank(5)));
+        System.assert(! new Frank(5).equals(new Frank(6)));
+        System.assert(! new Frank(5).equals(new Dollar(5)));
     }
     @isTest
     static void testFrancMultiplication(){
