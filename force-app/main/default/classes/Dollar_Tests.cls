@@ -7,7 +7,7 @@ private class Dollar_Tests {
     @IsTest
     static void itShouldMultiply() {
        //given
-        Dollar five = new Dollar(5);
+        Money five = Money.dollar(5);
         //when
 
         //then

@@ -6,6 +6,12 @@ public abstract class Money {
 
     protected Integer amount;
 
+    public abstract Money times(Integer multiplier);
+
+    public static  Money dollar(Integer amount) {
+        return new Dollar(amount);
+    }
+
     public Boolean equals(Object obj) {
         String thisClass = String.valueOf(this).split(':')[0];
         String objectToCompare = String.valueOf(obj).split(':')[0];

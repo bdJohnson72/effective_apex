@@ -8,7 +8,7 @@ public with sharing class Frank extends Money {
         this.amount = amount;
     }
 
-    public Frank times(Integer multiplier){
+    public override Money times(Integer multiplier){
         return new Frank(multiplier * this.amount);
     }
 
