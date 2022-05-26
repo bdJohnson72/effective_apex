@@ -12,7 +12,6 @@ private class Dollar_Tests {
 
         //then
         System.assert(new Dollar(10) == five.times(2));
-
         System.assert(new Dollar(15)== five.times(3));
     }
 
@@ -25,10 +24,16 @@ private class Dollar_Tests {
         System.assert(! new Frank(5).equals(new Frank(6)));
         System.assert(! new Frank(5).equals(new Dollar(5)));
     }
-    @isTest
+    @IsTest
     static void testFrancMultiplication(){
-        Frank five = new Frank(5);
+        Money five = Money.frank(5);
         System.assert(new Frank(10) == five.times(2));
         System.assert(new Frank(15) == five.times(3));
+    }
+
+    @IsTest
+    static void testCurrency(){
+        System.assert('USD' == Money.dollar(1).currencyType);
+        System.assert('CHF' == Money.frank(1).currencyType);
     }
 }

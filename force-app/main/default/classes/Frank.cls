@@ -4,12 +4,17 @@
 
 public with sharing class Frank extends Money {
 
+
     public Frank(Integer amount){
-        this.amount = amount;
+        this(amount, null);
+    }
+    public Frank(Integer amount, String currencyType){
+       super(amount, 'CHF');
     }
 
     public override Money times(Integer multiplier){
-        return new Frank(multiplier * this.amount);
+        return Money.frank(amount * multiplier);
     }
+
 
 }
