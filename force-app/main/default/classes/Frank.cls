@@ -12,9 +12,4 @@ public with sharing class Frank extends Money {
        super(amount, 'CHF');
     }
 
-    public override Money times(Integer multiplier){
-        return Money.frank(amount * multiplier);
-    }
-
-
 }

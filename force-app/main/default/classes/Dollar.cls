@@ -21,9 +21,5 @@ public with sharing class Dollar extends Money {
         super(amount, 'USD');
     }
 
-    public override Money times(Integer multiplier){
-        return Money.dollar(multiplier * this.amount);
-    }
-
 
 }

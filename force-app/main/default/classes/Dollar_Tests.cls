@@ -36,4 +36,9 @@ private class Dollar_Tests {
         System.assert('USD' == Money.dollar(1).currencyType);
         System.assert('CHF' == Money.frank(1).currencyType);
     }
+
+    @IsTest
+    static void testDifferentClassEquality(){
+        System.assert(new Money(10, 'CHF').equals(new Frank(10, 'CHF')));
+    }
 }

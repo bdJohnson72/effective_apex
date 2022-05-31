@@ -2,13 +2,17 @@
  * Created by brooks.johnson on 5/23/2022.
  */
 
-public abstract class Money {
+public virtual class Money {
 
     protected Integer amount;
     @TestVisible
     protected String currencyType;
 
-    public abstract Money times(Integer multiplier);
+   // public abstract Money times(Integer multiplier);
+
+    public virtual Money times(Integer multiplier) {
+        return new Money(amount * multiplier, currencyType);
+    }
 
     public Money(Integer amount, String currencyType){
         this.amount = amount;
@@ -24,10 +28,7 @@ public abstract class Money {
     }
 
     public Boolean equals(Object obj) {
-        String thisClass = String.valueOf(this).split(':')[0];
-        String objectToCompare = String.valueOf(obj).split(':')[0];
         Money money = (Money) obj;
-        return this.amount == money.amount &&
-                thisClass == objectToCompare;
+        return amount == money.amount && currencyType == money.currencyType;
     }
 }
