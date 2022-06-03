@@ -20,11 +20,11 @@ public virtual class Money {
     }
 
     public static  Money dollar(Integer amount) {
-        return new Dollar(amount, null);
+        return new Money(amount, 'USD');
     }
 
     public static Money frank(Integer amount) {
-        return new Frank(amount, null);
+        return new Money(amount, 'CHF');
     }
 
     public Boolean equals(Object obj) {
